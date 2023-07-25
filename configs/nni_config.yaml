@@ -1,0 +1,17 @@
+experimentName: skin_EfficientNetv2_k=512_n=128_min_max
+experimentWorkingDirectory: /data/wangzh/code/autoSMIM/experiments/skin/Efficientnetv2/k=512_n=128/optimization/
+search_space_file: space.json
+trialCommand: CUDA_VISIBLE_DEVICES=0,1 python /data/wangzh/code/autoSMIM/run.py --cfg config_search.yaml
+trialConcurrency: 2
+maxTrialNumber: 300
+maxExperimentDuration: 5h
+trialGpuNumber: 2
+tunerGpuIndices: 4,5
+tuner:
+   name: TPE
+   classArgs:
+      optimize_mode: minimize
+trainingService:
+   platform: local
+   useActiveGpu: False
+   maxTrialNumberPerGpu: 1

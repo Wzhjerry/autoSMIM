@@ -1,0 +1,26 @@
+workers: 12
+gpu: [0,1]
+
+batch_size: 24
+test_batch_size: 8
+epoch: 100
+lr: 0.001
+optimizer: Adam
+size: 512
+kfold: False
+resume: -1
+save_results: False
+dice_loss: False
+encoder: resnet50
+
+smoke_test: True
+evaluate: False
+inpainting: False
+update_config: False
+optimization: True
+
+eval_metric: jigsaw
+
+model: EfficientNetv2
+dataset_name: Ham
+save_name: /data/wangzh/SP-inpainting/experiments/skin/Efficientnetv2/k=512_n=128/

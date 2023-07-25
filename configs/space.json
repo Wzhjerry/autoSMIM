@@ -1,0 +1,4 @@
+{
+    "aug_k": {"_type": "randint", "_value": [40, 1000]},
+    "aug_n":{"_type": "randint", "_value": [1, 500]}
+  }

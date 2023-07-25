@@ -1,0 +1,36 @@
+workers: 10
+gpu: [0]
+
+batch_size: 10
+test_batch_size: 2
+epoch: 100
+lr: 0.005
+optimizer: Adam
+size: 512
+kfold: False
+resume: -1
+save_results: False
+dice_loss: True
+encoder: tu-efficientnetv2_s
+percent: 100
+
+smoke_test: True
+evaluate: False
+inpainting: False
+update_config: False
+optimization: False
+
+eval_metric: None
+aug_k: 512
+aug_n: 128
+
+resume_wandb: False
+log_name: ISIC17_EfficientNetv2_k=512_n=128
+tags: ['Efficientnetv2', 'segmentation', 'skin lesion', 'ISIC17']
+id: 2pstkhgo
+
+model: EfficientNetv2
+dataset_name: ISIC18
+description: experiment running for EfficientNetv2 with k=512 and n=128 pretrained for segmentation
+save_name: ./experiments/skin/Efficientnetv2/k=512_n=128/
+# pretrained: ./experiments/skin/Efficientnetv2/k=512_n=128/model_inpainting_best_0.ckpt
